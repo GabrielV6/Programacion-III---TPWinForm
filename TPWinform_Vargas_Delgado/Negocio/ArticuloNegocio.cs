@@ -23,9 +23,8 @@ namespace Negocio
             try
             {
                 conexion.ConnectionString = "Data Source = .; Initial Catalog=CATALOGO_DB; integrated security=true";
-               
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT * FROM ARTICULOS ";
+                comando.CommandText = "SELECT A.Codigo, A.Nombre Telefono, A.Descripcion,A.Precio,A.ImagenUrl, M.Descripcion Modelo , C.Descripcion Tipo FROM ARTICULOS A, MARCAS M , CATEGORIAS C WHERE A.IdMarca = M.id AND A.IdCategoria = C.Id";
                 comando.Connection = conexion;
                 
                 conexion.Open();
@@ -34,16 +33,20 @@ namespace Negocio
                 while (lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.Id = (int)lector["Id"];
-                    aux.Nombre = (string)lector["Nombre"];
+                    //aux.Id = (int)lector["Id"];
                     aux.Codigo = (string)lector["Codigo"];
-                    aux.Descripcion = (string)lector["Descripcion"];
-                    aux.IdMarca = (int)lector["IdMarca"];
-                    aux.IdCategoria = (int)lector["IdCategoria"];
-                    aux.ImagenUrl = (string)lector["ImagenURL"];
+                    aux.Nombre = (string)lector["Telefono"];
+                    aux.Descripcion = (string)lector["Descripcion"];              
                     aux.Precio = (decimal)lector["Precio"];
+                    aux.ImagenUrl = (string)lector["ImagenURL"];
 
+                    aux.marca = new Marca();
+                    aux.marca.DescripcionMarca = (string)lector["Modelo"];
 
+                    aux.categoria = new Categoria();
+                    aux.categoria.Descripcion = (string)lector["Tipo"];
+
+                    
 
                     lista.Add(aux);
                     

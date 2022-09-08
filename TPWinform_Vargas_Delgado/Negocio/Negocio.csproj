@@ -7,8 +7,8 @@
     <ProjectGuid>{75106EE0-D9F1-43E7-9F7F-EC7B22AF679C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>negocio</RootNamespace>
-    <AssemblyName>negocio</AssemblyName>
+    <RootNamespace>Negocio</RootNamespace>
+    <AssemblyName>Negocio</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
