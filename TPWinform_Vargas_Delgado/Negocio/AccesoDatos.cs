@@ -21,8 +21,9 @@ namespace Negocio
         
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true");
-            //"Data Source = .; Initial Catalog=CATALOGO_DB; integrated security=true" 
+            conexion = new SqlConnection("Data Source = .; Initial Catalog=CATALOGO_DB; integrated security=true");
+                                     
+                                        //server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true
             comando = new SqlCommand();
 
         }
@@ -46,6 +47,23 @@ namespace Negocio
                 throw ex;
             }
             
+        }
+        
+        //Se encarga de los INSERT a la BD
+
+        public void ejecutarAccion()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
         
         public void cerrarConexion()

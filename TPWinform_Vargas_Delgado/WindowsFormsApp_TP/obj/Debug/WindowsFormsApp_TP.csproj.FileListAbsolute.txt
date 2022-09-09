@@ -46,3 +46,4 @@ C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPW
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\bin\Debug\dominio.pdb
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\bin\Debug\negocio.pdb
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\obj\Debug\WindowsFormsApp_TP.csproj.CopyComplete
+C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\obj\Debug\WindowsFormsApp_TP.frmAltaArticulo.resources

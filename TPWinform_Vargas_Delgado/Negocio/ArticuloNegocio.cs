@@ -14,37 +14,28 @@ namespace Negocio
         public List<Articulo> listar()
         {
             List<Articulo> lista = new List<Articulo>();
-
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
+            AccesoDatos datos = new AccesoDatos();
             
 
             try
             {
-                conexion.ConnectionString = "Data Source = .; Initial Catalog=CATALOGO_DB; integrated security=true";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT A.Codigo, A.Nombre Telefono, A.Descripcion,A.Precio,A.ImagenUrl, M.Descripcion Modelo , C.Descripcion Tipo FROM ARTICULOS A, MARCAS M , CATEGORIAS C WHERE A.IdMarca = M.id AND A.IdCategoria = C.Id";
-                comando.Connection = conexion;
-                
-                conexion.Open();
-                lector = comando.ExecuteReader();
-                
-                while (lector.Read())
+                datos.setearConsulta("SELECT A.Codigo, A.Nombre Telefono, A.Descripcion,A.Precio,A.ImagenUrl, M.Descripcion Modelo , C.Descripcion Tipo FROM ARTICULOS A, MARCAS M , CATEGORIAS C WHERE A.IdMarca = M.id AND A.IdCategoria = C.Id");
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
                     //aux.Id = (int)lector["Id"];
-                    aux.Codigo = (string)lector["Codigo"];
-                    aux.Nombre = (string)lector["Telefono"];
-                    aux.Descripcion = (string)lector["Descripcion"];              
-                    aux.Precio = (decimal)lector["Precio"];
-                    aux.ImagenUrl = (string)lector["ImagenURL"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Telefono"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];              
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    aux.ImagenUrl = (string)datos.Lector["ImagenURL"];
 
                     aux.marca = new Marca();
-                    aux.marca.DescripcionMarca = (string)lector["Modelo"];
+                    aux.marca.DescripcionMarca = (string)datos.Lector["Modelo"];
 
                     aux.categoria = new Categoria();
-                    aux.categoria.Descripcion = (string)lector["Tipo"];
+                    aux.categoria.Descripcion = (string)datos.Lector["Tipo"];
 
                     
 
@@ -52,9 +43,7 @@ namespace Negocio
                     
 
                 }
-
-
-                conexion.Close();
+              
                 return lista;
             }
             catch (Exception ex)
@@ -62,8 +51,46 @@ namespace Negocio
                 
                 throw ex;
             }
+            finally
+            {
+                datos.cerrarConexion();
+            }
 
             
         }
+
+        // Posee la sentencia SQL para generar el INSERT desde el metodo alojado en la clase AccesoDatos
+        public void agregar(Articulo articulo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            
+            try
+            {
+                string valores = "values('" + articulo.Codigo + "','" + articulo.Nombre + "','" + articulo.Descripcion + "'," + articulo.Precio + ",'" + articulo.ImagenUrl + " ', " + articulo.marca.Id + ", " + articulo.categoria.Id + ")";
+                datos.setearConsulta("insert into ARTICULOS (Codigo,Nombre,Descripcion,Precio,ImagenURL, IdMarca, IdCategoria) " + valores);
+                
+
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+          
+            
+        }
+
+        public void modificar(Articulo articulo)
+        {
+
+        }
     }
 }
+
+

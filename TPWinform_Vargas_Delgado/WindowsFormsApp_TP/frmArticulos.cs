@@ -52,5 +52,10 @@ namespace WindowsFormsApp_TP
             }
         }
 
-     }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaArticulo alta = new frmAltaArticulo();
+            alta.ShowDialog();
+        }
+    }
 }
