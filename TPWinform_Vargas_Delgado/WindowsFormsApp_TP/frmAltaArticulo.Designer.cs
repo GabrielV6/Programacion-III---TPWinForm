@@ -38,13 +38,13 @@
             this.txbCodigo = new System.Windows.Forms.TextBox();
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.txbDescripcion = new System.Windows.Forms.TextBox();
-            this.txbIdmarca = new System.Windows.Forms.TextBox();
-            this.txbIdcategoria = new System.Windows.Forms.TextBox();
             this.txbURL = new System.Windows.Forms.TextBox();
             this.txbPrecio = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lbTitulo = new System.Windows.Forms.Label();
+            this.cboIdmarca = new System.Windows.Forms.ComboBox();
+            this.cboIdcategoria = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lbCodigo
@@ -134,22 +134,6 @@
             this.txbDescripcion.Size = new System.Drawing.Size(198, 22);
             this.txbDescripcion.TabIndex = 9;
             // 
-            // txbIdmarca
-            // 
-            this.txbIdmarca.Location = new System.Drawing.Point(146, 187);
-            this.txbIdmarca.Name = "txbIdmarca";
-            this.txbIdmarca.Size = new System.Drawing.Size(198, 22);
-            this.txbIdmarca.TabIndex = 10;
-            this.txbIdmarca.Text = "EJ: 1 - 9";
-            // 
-            // txbIdcategoria
-            // 
-            this.txbIdcategoria.Location = new System.Drawing.Point(146, 225);
-            this.txbIdcategoria.Name = "txbIdcategoria";
-            this.txbIdcategoria.Size = new System.Drawing.Size(198, 22);
-            this.txbIdcategoria.TabIndex = 11;
-            this.txbIdcategoria.Text = "EJ: 1 - 9";
-            // 
             // txbURL
             // 
             this.txbURL.Location = new System.Drawing.Point(146, 264);
@@ -195,18 +179,36 @@
             this.lbTitulo.TabIndex = 16;
             this.lbTitulo.Text = "ALTA DE ARTICULOS";
             // 
+            // cboIdmarca
+            // 
+            this.cboIdmarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboIdmarca.FormattingEnabled = true;
+            this.cboIdmarca.Location = new System.Drawing.Point(146, 185);
+            this.cboIdmarca.Name = "cboIdmarca";
+            this.cboIdmarca.Size = new System.Drawing.Size(198, 24);
+            this.cboIdmarca.TabIndex = 17;
+            // 
+            // cboIdcategoria
+            // 
+            this.cboIdcategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboIdcategoria.FormattingEnabled = true;
+            this.cboIdcategoria.Location = new System.Drawing.Point(146, 223);
+            this.cboIdcategoria.Name = "cboIdcategoria";
+            this.cboIdcategoria.Size = new System.Drawing.Size(198, 24);
+            this.cboIdcategoria.TabIndex = 18;
+            // 
             // frmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 410);
+            this.Controls.Add(this.cboIdcategoria);
+            this.Controls.Add(this.cboIdmarca);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txbPrecio);
             this.Controls.Add(this.txbURL);
-            this.Controls.Add(this.txbIdcategoria);
-            this.Controls.Add(this.txbIdmarca);
             this.Controls.Add(this.txbDescripcion);
             this.Controls.Add(this.txbNombre);
             this.Controls.Add(this.txbCodigo);
@@ -218,7 +220,9 @@
             this.Controls.Add(this.lbNombre);
             this.Controls.Add(this.lbCodigo);
             this.Name = "frmAltaArticulo";
-            this.Text = "frmAltaArticulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Alta de articulo";
+            this.Load += new System.EventHandler(this.frmAltaArticulo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,12 +240,12 @@
         private System.Windows.Forms.TextBox txbCodigo;
         private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.TextBox txbDescripcion;
-        private System.Windows.Forms.TextBox txbIdmarca;
-        private System.Windows.Forms.TextBox txbIdcategoria;
         private System.Windows.Forms.TextBox txbURL;
         private System.Windows.Forms.TextBox txbPrecio;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lbTitulo;
+        private System.Windows.Forms.ComboBox cboIdmarca;
+        private System.Windows.Forms.ComboBox cboIdcategoria;
     }
 }

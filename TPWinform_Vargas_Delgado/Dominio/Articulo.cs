@@ -18,6 +18,6 @@ namespace Dominio
         public string ImagenUrl { get; set; }
         public Marca marca { get; set; }
         public Categoria categoria { get; set; }
-        
+
     }
 }

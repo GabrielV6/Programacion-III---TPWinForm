@@ -4,9 +4,9 @@ C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\PROGRAMACION_II
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\PROGRAMACION_III\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\PROGRAMACION_III\dominio\obj\Debug\dominio.dll
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\PROGRAMACION_III\dominio\obj\Debug\dominio.pdb
-C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\bin\Debug\dominio.dll
-C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\bin\Debug\dominio.pdb
+C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\bin\Debug\Dominio.dll
+C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\bin\Debug\Dominio.pdb
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
-C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\obj\Debug\dominio.dll
-C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\obj\Debug\dominio.pdb
+C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\obj\Debug\Dominio.dll
+C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\obj\Debug\Dominio.pdb

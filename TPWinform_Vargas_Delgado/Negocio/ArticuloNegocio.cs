@@ -37,7 +37,6 @@ namespace Negocio
                     aux.categoria = new Categoria();
                     aux.categoria.Descripcion = (string)datos.Lector["Tipo"];
 
-                    
 
                     lista.Add(aux);
                     

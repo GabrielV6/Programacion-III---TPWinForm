@@ -36,12 +36,10 @@ namespace WindowsFormsApp_TP
                 articulo.Nombre = txbNombre.Text;
                 articulo.Descripcion = txbDescripcion.Text;
 
-                articulo.marca = new Marca(); // Se crea el objeto.
-                articulo.marca.Id = int.Parse(txbIdmarca.Text);
+                //Recibo del comboBox el item seleccionado y hago un casteo del objeto.
+                articulo.marca = (Marca)cboIdmarca.SelectedItem;
+                articulo.categoria = (Categoria)cboIdcategoria.SelectedItem;
 
-                articulo.categoria = new Categoria(); // Se crea el objeto.
-                articulo.categoria.Id = int.Parse(txbIdcategoria.Text);
-                
                 articulo.ImagenUrl = txbURL.Text;
                 articulo.Precio = Convert.ToDecimal(txbPrecio.Text);
 
@@ -49,6 +47,23 @@ namespace WindowsFormsApp_TP
                 MessageBox.Show("Articulo agregado con exito");
                 this.Close();
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void frmAltaArticulo_Load(object sender, EventArgs e)
+        {
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+
+            try
+            {
+                cboIdmarca.DataSource = marcaNegocio.listar();
+                cboIdcategoria.DataSource = categoriaNegocio.listar();
+                
             }
             catch (Exception ex)
             {
