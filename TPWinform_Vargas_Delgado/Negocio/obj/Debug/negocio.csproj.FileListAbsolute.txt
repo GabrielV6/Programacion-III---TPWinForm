@@ -16,3 +16,12 @@ C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPW
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\negocio\obj\Debug\Negocio.dll
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\negocio\obj\Debug\Negocio.pdb
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\negocio\bin\Debug\Negocio.dll
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\negocio\bin\Debug\Negocio.pdb
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\negocio\bin\Debug\Dominio.dll
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\negocio\bin\Debug\Dominio.pdb
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\negocio\obj\Debug\Negocio.dll
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\negocio\obj\Debug\Negocio.pdb

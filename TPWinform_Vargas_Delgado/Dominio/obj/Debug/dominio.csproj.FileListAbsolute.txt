@@ -10,3 +10,9 @@ C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPW
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\obj\Debug\Dominio.dll
 C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\dominio\obj\Debug\Dominio.pdb
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\dominio\bin\Debug\Dominio.dll
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\dominio\bin\Debug\Dominio.pdb
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\dominio\obj\Debug\Dominio.dll
+C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\dominio\obj\Debug\Dominio.pdb
