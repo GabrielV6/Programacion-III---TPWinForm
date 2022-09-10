@@ -29,7 +29,9 @@ namespace Negocio
                     aux.Nombre = (string)datos.Lector["Telefono"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];              
                     aux.Precio = (decimal)datos.Lector["Precio"];
-                    aux.ImagenUrl = (string)datos.Lector["ImagenURL"];
+                    // agrego esta validacion solo aca porque me parece que deberia ser el unico campo de tendria que aceptar NULL
+                    if(!(datos.Lector["ImagenURL"] is DBNull))
+                        aux.ImagenUrl = (string)datos.Lector["ImagenURL"];
 
                     aux.marca = new Marca();
                     aux.marca.DescripcionMarca = (string)datos.Lector["Modelo"];
