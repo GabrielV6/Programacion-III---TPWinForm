@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 using Dominio; //se referencia el proyecto
+using System.Linq.Expressions;
 
 namespace Negocio
 {
@@ -19,12 +20,12 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("SELECT A.Codigo, A.Nombre Telefono, A.Descripcion,A.Precio,A.ImagenUrl, M.Descripcion Modelo , C.Descripcion Tipo FROM ARTICULOS A, MARCAS M , CATEGORIAS C WHERE A.IdMarca = M.id AND A.IdCategoria = C.Id");
+                datos.setearConsulta("SELECT A.Codigo, A.Nombre Telefono, A.Descripcion,A.Precio,A.ImagenUrl, A.IdMarca, A.IdCategoria, A.Id, M.Descripcion Modelo , C.Descripcion Tipo FROM ARTICULOS A, MARCAS M , CATEGORIAS C WHERE A.IdMarca = M.id AND A.IdCategoria = C.Id");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    //aux.Id = (int)lector["Id"];
+                    aux.Id = (int)datos.Lector["Id"];
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Telefono"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];              
@@ -34,9 +35,10 @@ namespace Negocio
                         aux.ImagenUrl = (string)datos.Lector["ImagenURL"];
 
                     aux.marca = new Marca();
+                    aux.marca.Id = (int)datos.Lector["IdMarca"];
                     aux.marca.DescripcionMarca = (string)datos.Lector["Modelo"];
-
                     aux.categoria = new Categoria();
+                    aux.categoria.Id = (int)datos.Lector["IdCategoria"];
                     aux.categoria.Descripcion = (string)datos.Lector["Tipo"];
 
 
@@ -89,7 +91,33 @@ namespace Negocio
 
         public void modificar(Articulo articulo)
         {
+            AccesoDatos datos = new AccesoDatos();
 
+            try
+            {
+                datos.setearConsulta("update ARTICULOS set Codigo = @codigo, Nombre = @nombre, Descripcion = @desc, Precio = @precio, ImagenURL = @img, IdMarca = @idMarca, IdCategoria = @idCategoria Where Id = @id");
+                datos.setearParametro("@codigo", articulo.Codigo);
+                datos.setearParametro("@nombre", articulo.Nombre);
+                datos.setearParametro("@desc", articulo.Descripcion);
+                datos.setearParametro("@precio", articulo.Precio);
+                datos.setearParametro("@img", articulo.ImagenUrl);
+                datos.setearParametro("@idMarca", articulo.marca.Id);
+                datos.setearParametro("@idCategoria", articulo.categoria.Id);
+                datos.setearParametro("@id", articulo.Id);
+
+                datos.ejecutarAccion();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
     }
 }

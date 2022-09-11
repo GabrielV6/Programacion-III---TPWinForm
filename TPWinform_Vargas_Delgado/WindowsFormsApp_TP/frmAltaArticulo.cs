@@ -14,9 +14,17 @@ namespace WindowsFormsApp_TP
 {
     public partial class frmAltaArticulo : Form
     {
+        private Articulo articulo = null;
         public frmAltaArticulo()
         {
+            InitializeComponent();   
+        }
+
+        public frmAltaArticulo(Articulo articulo)
+        {
             InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar articulo";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -26,12 +34,15 @@ namespace WindowsFormsApp_TP
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Articulo articulo = new Articulo();
             
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             try
             {
+                if (articulo == null)
+                {
+                    articulo = new Articulo();
+                }
                 articulo.Codigo = txbCodigo.Text;
                 articulo.Nombre = txbNombre.Text;
                 articulo.Descripcion = txbDescripcion.Text;
@@ -43,8 +54,17 @@ namespace WindowsFormsApp_TP
                 articulo.ImagenUrl = txbURL.Text;
                 articulo.Precio = Convert.ToDecimal(txbPrecio.Text);
 
-                negocio.agregar(articulo);
-                MessageBox.Show("Articulo agregado con exito");
+                if (articulo.Id != 0)
+                {
+                    negocio.modificar(articulo);
+                    MessageBox.Show("Articulo modificado con exito");
+                }
+                else
+                {
+                    negocio.agregar(articulo);
+                    MessageBox.Show("Articulo agregado con exito");
+                }
+ 
                 this.Close();
 
             }
@@ -62,7 +82,25 @@ namespace WindowsFormsApp_TP
             try
             {
                 cboIdmarca.DataSource = marcaNegocio.listar();
+                cboIdmarca.ValueMember = "Id";
+                cboIdmarca.DisplayMember = "DescripcionMarca";
                 cboIdcategoria.DataSource = categoriaNegocio.listar();
+                cboIdcategoria.ValueMember = "Id";
+                cboIdcategoria.DisplayMember = "Descripcion";
+
+
+                if (articulo != null) 
+                {
+                     txbCodigo.Text = articulo.Codigo;
+                     txbNombre.Text = articulo.Nombre;
+                     txbDescripcion.Text = articulo.Descripcion;
+                    // cargamos tambien la imagen del articulo?
+                    // cargarImagen(articulo.Urlimagen);
+                     cboIdmarca.SelectedValue = articulo.marca.Id;
+                     cboIdcategoria.SelectedValue = articulo.categoria.Id;
+                     txbURL.Text = articulo.ImagenUrl;
+                     txbPrecio.Text = articulo.Precio.ToString();
+                }
                 
             }
             catch (Exception ex)

@@ -27,6 +27,7 @@ namespace WindowsFormsApp_TP
             listaArticulos = negocio.listar();
             dgvArticulo.DataSource = listaArticulos;
             dgvArticulo.Columns["ImagenURL"].Visible = false; // para no ver la URL
+            dgvArticulo.Columns["Id"].Visible = false;
             cargarImagen(listaArticulos[0].ImagenUrl);
             
         }
@@ -56,6 +57,16 @@ namespace WindowsFormsApp_TP
         {
             frmAltaArticulo alta = new frmAltaArticulo();
             alta.ShowDialog();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+
+            frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
+            modificar.ShowDialog();
+            //cargar();
         }
     }
 }
