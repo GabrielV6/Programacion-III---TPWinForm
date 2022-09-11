@@ -24,13 +24,7 @@ namespace WindowsFormsApp_TP
 
         private void frmArticulo_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            listaArticulos = negocio.listar();
-            dgvArticulo.DataSource = listaArticulos;
-            dgvArticulo.Columns["ImagenURL"].Visible = false; // para no ver la URL
-            dgvArticulo.Columns["Id"].Visible = false;
-            cargarImagen(listaArticulos[0].ImagenUrl);
-            
+            cargar();
         }
 
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
@@ -54,6 +48,23 @@ namespace WindowsFormsApp_TP
             }
         }
 
+        private void cargar()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                listaArticulos = negocio.listar();
+                dgvArticulo.DataSource = listaArticulos;
+                dgvArticulo.Columns["ImagenURL"].Visible = false; 
+                dgvArticulo.Columns["Id"].Visible = false;
+                cargarImagen(listaArticulos[0].ImagenUrl);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAltaArticulo alta = new frmAltaArticulo();
@@ -67,7 +78,7 @@ namespace WindowsFormsApp_TP
 
             frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
             modificar.ShowDialog();
-            //cargar();
+            cargar();
         }
 
         private void btnEliminarFisico_Click(object sender, EventArgs e)
@@ -81,7 +92,7 @@ namespace WindowsFormsApp_TP
                 {
                     seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
                     negocio.eliminar(seleccionado.Id);
-                    // cargar();
+                    cargar();
                 }
             }
             catch (Exception ex)
