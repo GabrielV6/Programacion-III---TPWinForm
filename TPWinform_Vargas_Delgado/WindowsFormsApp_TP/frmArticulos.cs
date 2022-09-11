@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 using Negocio;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WindowsFormsApp_TP
 {
@@ -67,6 +68,26 @@ namespace WindowsFormsApp_TP
             frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
             modificar.ShowDialog();
             //cargar();
+        }
+
+        private void btnEliminarFisico_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("Confirma la eliminacion del articulo seleccionado? ", "Eliminando articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes) 
+                {
+                    seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                    negocio.eliminar(seleccionado.Id);
+                    // cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

@@ -41,7 +41,7 @@
             // 
             this.dgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulo.Location = new System.Drawing.Point(9, 17);
-            this.dgvArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.dgvArticulo.Name = "dgvArticulo";
             this.dgvArticulo.RowHeadersWidth = 51;
             this.dgvArticulo.RowTemplate.Height = 24;
@@ -52,7 +52,7 @@
             // pbArticulos
             // 
             this.pbArticulos.Location = new System.Drawing.Point(681, 17);
-            this.pbArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.pbArticulos.Name = "pbArticulos";
             this.pbArticulos.Size = new System.Drawing.Size(363, 284);
             this.pbArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -63,7 +63,7 @@
             // 
             this.btnAgregar.ForeColor = System.Drawing.Color.Green;
             this.btnAgregar.Location = new System.Drawing.Point(9, 319);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(63, 23);
             this.btnAgregar.TabIndex = 2;
@@ -91,6 +91,7 @@
             this.btnEliminarFisico.TabIndex = 4;
             this.btnEliminarFisico.Text = "Eliminar";
             this.btnEliminarFisico.UseVisualStyleBackColor = true;
+            this.btnEliminarFisico.Click += new System.EventHandler(this.btnEliminarFisico_Click);
             // 
             // frmArticulo
             // 
@@ -102,7 +103,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pbArticulos);
             this.Controls.Add(this.dgvArticulo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articulos";
