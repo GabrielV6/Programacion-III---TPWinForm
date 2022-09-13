@@ -149,9 +149,9 @@
             this.lblCampo.AutoSize = true;
             this.lblCampo.Location = new System.Drawing.Point(12, 437);
             this.lblCampo.Name = "lblCampo";
-            this.lblCampo.Size = new System.Drawing.Size(40, 13);
+            this.lblCampo.Size = new System.Drawing.Size(43, 13);
             this.lblCampo.TabIndex = 8;
-            this.lblCampo.Text = "Campo";
+            this.lblCampo.Text = "Campo:";
             this.lblCampo.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblCriterio
@@ -159,9 +159,9 @@
             this.lblCriterio.AutoSize = true;
             this.lblCriterio.Location = new System.Drawing.Point(202, 437);
             this.lblCriterio.Name = "lblCriterio";
-            this.lblCriterio.Size = new System.Drawing.Size(39, 13);
+            this.lblCriterio.Size = new System.Drawing.Size(42, 13);
             this.lblCriterio.TabIndex = 9;
-            this.lblCriterio.Text = "Criterio";
+            this.lblCriterio.Text = "Criterio:";
             // 
             // lblFiltro
             // 
@@ -174,14 +174,17 @@
             // 
             // cboCampo
             // 
+            this.cboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCampo.FormattingEnabled = true;
             this.cboCampo.Location = new System.Drawing.Point(64, 433);
             this.cboCampo.Name = "cboCampo";
             this.cboCampo.Size = new System.Drawing.Size(121, 21);
             this.cboCampo.TabIndex = 11;
+            this.cboCampo.SelectedIndexChanged += new System.EventHandler(this.cboCampo_SelectedIndexChanged);
             // 
             // cboCriterio
             // 
+            this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCriterio.FormattingEnabled = true;
             this.cboCriterio.Location = new System.Drawing.Point(254, 433);
             this.cboCriterio.Name = "cboCriterio";
@@ -197,6 +200,7 @@
             this.btnFiltro.TabIndex = 13;
             this.btnFiltro.Text = "Buscar";
             this.btnFiltro.UseVisualStyleBackColor = true;
+            this.btnFiltro.Click += new System.EventHandler(this.btnFiltro_Click);
             // 
             // txtFiltro
             // 

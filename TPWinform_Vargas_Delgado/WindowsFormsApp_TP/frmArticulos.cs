@@ -25,6 +25,10 @@ namespace WindowsFormsApp_TP
         private void frmArticulo_Load(object sender, EventArgs e)
         {
             cargar();
+            cboCampo.Items.Add("Codigo");
+            cboCampo.Items.Add("Nombre");
+            cboCampo.Items.Add("Descripcion");
+            cboCampo.Items.Add("Precio");
         }
 
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
@@ -119,6 +123,41 @@ namespace WindowsFormsApp_TP
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cboCampo.SelectedItem.ToString();
+            if (opcion == "Precio")
+            {
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Mayor a");
+                cboCriterio.Items.Add("Igual a");
+                cboCriterio.Items.Add("Menor a");
+            }
+            else
+            {
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Comienza con");
+                cboCriterio.Items.Add("Contiene");
+                cboCriterio.Items.Add("Termina con");
+            }
+        }
+
+        private void btnFiltro_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio articulo = new ArticuloNegocio();
+            try
+            {
+                string campo = cboCampo.SelectedItem.ToString();
+                string criterio = cboCriterio.SelectedItem.ToString();
+                string filtro = txtFiltro.Text;
+                dgvArticulo.DataSource = articulo.filtrar(campo, criterio, filtro);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
