@@ -33,6 +33,9 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminarFisico = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblAltamarca = new System.Windows.Forms.Button();
+            this.lblAltamodelo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulos)).BeginInit();
             this.SuspendLayout();
@@ -40,21 +43,26 @@
             // dgvArticulo
             // 
             this.dgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulo.Location = new System.Drawing.Point(9, 17);
-            this.dgvArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvArticulo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvArticulo.Location = new System.Drawing.Point(12, 97);
+            this.dgvArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvArticulo.MultiSelect = false;
             this.dgvArticulo.Name = "dgvArticulo";
             this.dgvArticulo.RowHeadersWidth = 51;
             this.dgvArticulo.RowTemplate.Height = 24;
-            this.dgvArticulo.Size = new System.Drawing.Size(655, 284);
+            this.dgvArticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvArticulo.Size = new System.Drawing.Size(873, 350);
             this.dgvArticulo.TabIndex = 0;
             this.dgvArticulo.SelectionChanged += new System.EventHandler(this.dgvArticulo_SelectionChanged);
             // 
             // pbArticulos
             // 
-            this.pbArticulos.Location = new System.Drawing.Point(681, 17);
-            this.pbArticulos.Margin = new System.Windows.Forms.Padding(2);
+            this.pbArticulos.BackColor = System.Drawing.SystemColors.Info;
+            this.pbArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbArticulos.Location = new System.Drawing.Point(908, 97);
+            this.pbArticulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbArticulos.Name = "pbArticulos";
-            this.pbArticulos.Size = new System.Drawing.Size(363, 284);
+            this.pbArticulos.Size = new System.Drawing.Size(484, 350);
             this.pbArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArticulos.TabIndex = 1;
             this.pbArticulos.TabStop = false;
@@ -62,48 +70,88 @@
             // btnAgregar
             // 
             this.btnAgregar.ForeColor = System.Drawing.Color.Green;
-            this.btnAgregar.Location = new System.Drawing.Point(9, 319);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 469);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(63, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(137, 28);
             this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Agregar Articulo";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnModificar.Location = new System.Drawing.Point(99, 318);
+            this.btnModificar.Location = new System.Drawing.Point(156, 469);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.Size = new System.Drawing.Size(139, 28);
             this.btnModificar.TabIndex = 3;
-            this.btnModificar.Text = "Modificar";
+            this.btnModificar.Text = "Modificar Articulo";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminarFisico
             // 
             this.btnEliminarFisico.ForeColor = System.Drawing.Color.Red;
-            this.btnEliminarFisico.Location = new System.Drawing.Point(202, 318);
+            this.btnEliminarFisico.Location = new System.Drawing.Point(753, 469);
+            this.btnEliminarFisico.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarFisico.Name = "btnEliminarFisico";
-            this.btnEliminarFisico.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarFisico.Size = new System.Drawing.Size(132, 28);
             this.btnEliminarFisico.TabIndex = 4;
-            this.btnEliminarFisico.Text = "Eliminar";
+            this.btnEliminarFisico.Text = "Eliminar Articulo";
             this.btnEliminarFisico.UseVisualStyleBackColor = true;
             this.btnEliminarFisico.Click += new System.EventHandler(this.btnEliminarFisico_Click);
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Century Schoolbook", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.lblTitulo.Location = new System.Drawing.Point(12, 39);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(298, 40);
+            this.lblTitulo.TabIndex = 5;
+            this.lblTitulo.Text = "Lista de Articulos";
+            // 
+            // lblAltamarca
+            // 
+            this.lblAltamarca.ForeColor = System.Drawing.Color.Green;
+            this.lblAltamarca.Location = new System.Drawing.Point(466, 469);
+            this.lblAltamarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblAltamarca.Name = "lblAltamarca";
+            this.lblAltamarca.Size = new System.Drawing.Size(137, 28);
+            this.lblAltamarca.TabIndex = 6;
+            this.lblAltamarca.Text = "Agregar Marca";
+            this.lblAltamarca.UseVisualStyleBackColor = true;
+            this.lblAltamarca.Click += new System.EventHandler(this.lblAltamarca_Click);
+            // 
+            // lblAltamodelo
+            // 
+            this.lblAltamodelo.ForeColor = System.Drawing.Color.Green;
+            this.lblAltamodelo.Location = new System.Drawing.Point(609, 469);
+            this.lblAltamodelo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblAltamodelo.Name = "lblAltamodelo";
+            this.lblAltamodelo.Size = new System.Drawing.Size(137, 28);
+            this.lblAltamodelo.TabIndex = 7;
+            this.lblAltamodelo.Text = "Agregar Categoria";
+            this.lblAltamodelo.UseVisualStyleBackColor = true;
+            this.lblAltamodelo.Click += new System.EventHandler(this.lblAltamodelo_Click);
+            // 
             // frmArticulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 370);
+            this.ClientSize = new System.Drawing.Size(1435, 523);
+            this.Controls.Add(this.lblAltamodelo);
+            this.Controls.Add(this.lblAltamarca);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnEliminarFisico);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pbArticulos);
             this.Controls.Add(this.dgvArticulo);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articulos";
@@ -111,6 +159,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -121,6 +170,9 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminarFisico;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button lblAltamarca;
+        private System.Windows.Forms.Button lblAltamodelo;
     }
 }
 

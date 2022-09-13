@@ -25,6 +25,7 @@ namespace WindowsFormsApp_TP
             InitializeComponent();
             this.articulo = articulo;
             Text = "Modificar articulo";
+            lbTitulo.Text = "Update";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -52,7 +53,20 @@ namespace WindowsFormsApp_TP
                 articulo.categoria = (Categoria)cboIdcategoria.SelectedItem;
 
                 articulo.ImagenUrl = txbURL.Text;
-                articulo.Precio = Convert.ToDecimal(txbPrecio.Text);
+                // Validar si el formato del precio es vacio o es 0
+              
+
+                if (Convert.ToDecimal(txbPrecio.Text) > 0)
+                {
+                    articulo.Precio = Convert.ToDecimal(txbPrecio.Text);
+                }
+                else
+                {
+                    //si el precio es menor a 0 o vacio, entonces ir directamente al catch
+                  
+                        throw new Exception();
+                }
+
 
                 if (articulo.Id != 0)
                 {
@@ -70,7 +84,14 @@ namespace WindowsFormsApp_TP
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                if (txbPrecio.Text == ""|| Convert.ToDecimal(txbPrecio.Text)==0)
+                    MessageBox.Show("El precio debe ser mayor a cero");
+
+                DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "No es posible la operacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.No)
+                {
+                    Close();
+                }
             }
         }
 
@@ -108,5 +129,6 @@ namespace WindowsFormsApp_TP
                 MessageBox.Show(ex.ToString());
             }
         }
+
     }
 }

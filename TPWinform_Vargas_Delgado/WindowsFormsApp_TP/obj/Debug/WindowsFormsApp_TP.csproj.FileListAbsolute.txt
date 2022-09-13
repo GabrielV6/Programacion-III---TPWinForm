@@ -64,3 +64,5 @@ C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\
 C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\obj\Debug\WindowsFormsApp_TP.csproj.CopyComplete
 C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\obj\Debug\WindowsFormsApp_TP.exe
 C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\obj\Debug\WindowsFormsApp_TP.pdb
+C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\obj\Debug\WindowsFormsApp_TP.frmAltaMarca.resources
+C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\obj\Debug\WindowsFormsApp_TP.frmAltaCategoria.resources

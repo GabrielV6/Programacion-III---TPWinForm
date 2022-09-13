@@ -69,6 +69,7 @@ namespace WindowsFormsApp_TP
         {
             frmAltaArticulo alta = new frmAltaArticulo();
             alta.ShowDialog();
+            cargar();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -99,6 +100,20 @@ namespace WindowsFormsApp_TP
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void lblAltamarca_Click(object sender, EventArgs e)
+        {
+             //Alta de Marcas
+            frmAltaMarca altamarca = new frmAltaMarca();
+            altamarca.ShowDialog();
+        }
+
+        private void lblAltamodelo_Click(object sender, EventArgs e)
+        {
+            //Altas de Categorias
+            frmAltaCategoria altacategoria = new frmAltaCategoria();
+            altacategoria.ShowDialog();
         }
     }
 }
