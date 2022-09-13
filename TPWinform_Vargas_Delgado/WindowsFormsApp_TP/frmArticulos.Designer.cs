@@ -44,14 +44,14 @@
             // 
             this.dgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvArticulo.Location = new System.Drawing.Point(12, 97);
-            this.dgvArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvArticulo.Location = new System.Drawing.Point(9, 79);
+            this.dgvArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvArticulo.MultiSelect = false;
             this.dgvArticulo.Name = "dgvArticulo";
             this.dgvArticulo.RowHeadersWidth = 51;
             this.dgvArticulo.RowTemplate.Height = 24;
             this.dgvArticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulo.Size = new System.Drawing.Size(873, 350);
+            this.dgvArticulo.Size = new System.Drawing.Size(655, 284);
             this.dgvArticulo.TabIndex = 0;
             this.dgvArticulo.SelectionChanged += new System.EventHandler(this.dgvArticulo_SelectionChanged);
             // 
@@ -59,10 +59,10 @@
             // 
             this.pbArticulos.BackColor = System.Drawing.SystemColors.Info;
             this.pbArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbArticulos.Location = new System.Drawing.Point(908, 97);
-            this.pbArticulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbArticulos.Location = new System.Drawing.Point(680, 79);
+            this.pbArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbArticulos.Name = "pbArticulos";
-            this.pbArticulos.Size = new System.Drawing.Size(484, 350);
+            this.pbArticulos.Size = new System.Drawing.Size(328, 284);
             this.pbArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArticulos.TabIndex = 1;
             this.pbArticulos.TabStop = false;
@@ -70,10 +70,10 @@
             // btnAgregar
             // 
             this.btnAgregar.ForeColor = System.Drawing.Color.Green;
-            this.btnAgregar.Location = new System.Drawing.Point(12, 469);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(9, 381);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(137, 28);
+            this.btnAgregar.Size = new System.Drawing.Size(103, 23);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar Articulo";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -82,10 +82,9 @@
             // btnModificar
             // 
             this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnModificar.Location = new System.Drawing.Point(156, 469);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Location = new System.Drawing.Point(117, 381);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(139, 28);
+            this.btnModificar.Size = new System.Drawing.Size(104, 23);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar Articulo";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -94,10 +93,9 @@
             // btnEliminarFisico
             // 
             this.btnEliminarFisico.ForeColor = System.Drawing.Color.Red;
-            this.btnEliminarFisico.Location = new System.Drawing.Point(753, 469);
-            this.btnEliminarFisico.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarFisico.Location = new System.Drawing.Point(565, 381);
             this.btnEliminarFisico.Name = "btnEliminarFisico";
-            this.btnEliminarFisico.Size = new System.Drawing.Size(132, 28);
+            this.btnEliminarFisico.Size = new System.Drawing.Size(99, 23);
             this.btnEliminarFisico.TabIndex = 4;
             this.btnEliminarFisico.Text = "Eliminar Articulo";
             this.btnEliminarFisico.UseVisualStyleBackColor = true;
@@ -106,21 +104,22 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Century Schoolbook", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.lblTitulo.Location = new System.Drawing.Point(12, 39);
+            this.lblTitulo.Location = new System.Drawing.Point(9, 32);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(298, 40);
+            this.lblTitulo.Size = new System.Drawing.Size(221, 31);
             this.lblTitulo.TabIndex = 5;
             this.lblTitulo.Text = "Lista de Articulos";
             // 
             // lblAltamarca
             // 
             this.lblAltamarca.ForeColor = System.Drawing.Color.Green;
-            this.lblAltamarca.Location = new System.Drawing.Point(466, 469);
-            this.lblAltamarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblAltamarca.Location = new System.Drawing.Point(350, 381);
+            this.lblAltamarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblAltamarca.Name = "lblAltamarca";
-            this.lblAltamarca.Size = new System.Drawing.Size(137, 28);
+            this.lblAltamarca.Size = new System.Drawing.Size(103, 23);
             this.lblAltamarca.TabIndex = 6;
             this.lblAltamarca.Text = "Agregar Marca";
             this.lblAltamarca.UseVisualStyleBackColor = true;
@@ -129,10 +128,10 @@
             // lblAltamodelo
             // 
             this.lblAltamodelo.ForeColor = System.Drawing.Color.Green;
-            this.lblAltamodelo.Location = new System.Drawing.Point(609, 469);
-            this.lblAltamodelo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblAltamodelo.Location = new System.Drawing.Point(457, 381);
+            this.lblAltamodelo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblAltamodelo.Name = "lblAltamodelo";
-            this.lblAltamodelo.Size = new System.Drawing.Size(137, 28);
+            this.lblAltamodelo.Size = new System.Drawing.Size(103, 23);
             this.lblAltamodelo.TabIndex = 7;
             this.lblAltamodelo.Text = "Agregar Categoria";
             this.lblAltamodelo.UseVisualStyleBackColor = true;
@@ -140,9 +139,9 @@
             // 
             // frmArticulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1435, 523);
+            this.ClientSize = new System.Drawing.Size(1028, 425);
             this.Controls.Add(this.lblAltamodelo);
             this.Controls.Add(this.lblAltamarca);
             this.Controls.Add(this.lblTitulo);
@@ -151,7 +150,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pbArticulos);
             this.Controls.Add(this.dgvArticulo);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articulos";
