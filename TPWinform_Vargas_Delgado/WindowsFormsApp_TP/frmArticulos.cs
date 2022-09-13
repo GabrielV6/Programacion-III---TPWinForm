@@ -115,5 +115,10 @@ namespace WindowsFormsApp_TP
             frmAltaCategoria altacategoria = new frmAltaCategoria();
             altacategoria.ShowDialog();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
