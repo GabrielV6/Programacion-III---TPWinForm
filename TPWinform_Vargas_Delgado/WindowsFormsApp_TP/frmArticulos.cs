@@ -159,5 +159,20 @@ namespace WindowsFormsApp_TP
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+
+            frmVerArticulo ver = new frmVerArticulo(seleccionado);
+            ver.ShowDialog();
+            cargar();
+        }
+
+        private void pbArticulos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

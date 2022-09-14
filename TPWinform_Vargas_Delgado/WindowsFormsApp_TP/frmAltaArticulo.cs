@@ -109,7 +109,6 @@ namespace WindowsFormsApp_TP
                 cboIdcategoria.ValueMember = "Id";
                 cboIdcategoria.DisplayMember = "Descripcion";
 
-
                 if (articulo != null) 
                 {
                      txbCodigo.Text = articulo.Codigo;
@@ -121,14 +120,12 @@ namespace WindowsFormsApp_TP
                      cboIdcategoria.SelectedValue = articulo.categoria.Id;
                      txbURL.Text = articulo.ImagenUrl;
                      txbPrecio.Text = articulo.Precio.ToString();
-                }
-                
+                }    
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
         }
-
     }
 }

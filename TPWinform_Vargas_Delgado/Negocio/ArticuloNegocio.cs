@@ -148,6 +148,7 @@ namespace Negocio
                     case "Nombre":
                         switch (criterio)
                         {
+                            
                             case "Comienza con":
                                 consulta += "A.Nombre like '" + filtro + "%' ";
                                 break;
@@ -214,7 +215,6 @@ namespace Negocio
                     aux.categoria.Descripcion = (string)datos.Lector["Tipo"];
                     lista.Add(aux);
                 }
-
                 return lista;
             }
             catch (Exception ex)
