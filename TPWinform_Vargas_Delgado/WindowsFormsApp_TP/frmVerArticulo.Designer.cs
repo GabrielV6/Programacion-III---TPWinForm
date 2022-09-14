@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.cboIdcategoria = new System.Windows.Forms.ComboBox();
-            this.cboIdmarca = new System.Windows.Forms.ComboBox();
             this.txbPrecio = new System.Windows.Forms.TextBox();
             this.txbDescripcion = new System.Windows.Forms.TextBox();
             this.txbNombre = new System.Windows.Forms.TextBox();
@@ -41,28 +40,20 @@
             this.lbNombre = new System.Windows.Forms.Label();
             this.lbCodigo = new System.Windows.Forms.Label();
             this.pbArticulos = new System.Windows.Forms.PictureBox();
+            this.cboIdmarca = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // cboIdcategoria
             // 
             this.cboIdcategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboIdcategoria.Enabled = false;
             this.cboIdcategoria.FormattingEnabled = true;
             this.cboIdcategoria.Location = new System.Drawing.Point(100, 397);
             this.cboIdcategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cboIdcategoria.Name = "cboIdcategoria";
             this.cboIdcategoria.Size = new System.Drawing.Size(150, 21);
             this.cboIdcategoria.TabIndex = 15;
-            // 
-            // cboIdmarca
-            // 
-            this.cboIdmarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboIdmarca.FormattingEnabled = true;
-            this.cboIdmarca.Location = new System.Drawing.Point(100, 363);
-            this.cboIdmarca.Margin = new System.Windows.Forms.Padding(2);
-            this.cboIdmarca.Name = "cboIdmarca";
-            this.cboIdmarca.Size = new System.Drawing.Size(150, 21);
-            this.cboIdmarca.TabIndex = 13;
             // 
             // txbPrecio
             // 
@@ -174,6 +165,17 @@
             this.pbArticulos.TabIndex = 21;
             this.pbArticulos.TabStop = false;
             // 
+            // cboIdmarca
+            // 
+            this.cboIdmarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboIdmarca.Enabled = false;
+            this.cboIdmarca.FormattingEnabled = true;
+            this.cboIdmarca.Location = new System.Drawing.Point(100, 363);
+            this.cboIdmarca.Margin = new System.Windows.Forms.Padding(2);
+            this.cboIdmarca.Name = "cboIdmarca";
+            this.cboIdmarca.Size = new System.Drawing.Size(150, 21);
+            this.cboIdmarca.TabIndex = 13;
+            // 
             // frmVerArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,7 +206,6 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cboIdcategoria;
-        private System.Windows.Forms.ComboBox cboIdmarca;
         private System.Windows.Forms.TextBox txbPrecio;
         private System.Windows.Forms.TextBox txbDescripcion;
         private System.Windows.Forms.TextBox txbNombre;
@@ -216,5 +217,6 @@
         private System.Windows.Forms.Label lbNombre;
         private System.Windows.Forms.Label lbCodigo;
         private System.Windows.Forms.PictureBox pbArticulos;
+        private System.Windows.Forms.ComboBox cboIdmarca;
     }
 }
