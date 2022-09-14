@@ -8,7 +8,7 @@ Deberá ser un programa de escritorio que contemple la administración de artíc
 - [x] Agregar artículos.
 - [x] Modificar artículos.
 - [x] Eliminar artículos.
-- [ ] Ver detalle de un artículo.
+- [x] Ver detalle de un artículo.
 Toda ésta información deberá ser persistida en una base de datos ya existente (la cual se adjunta).
 
 Los datos mínimos con los que deberá contar el artículo son los siguientes:
