@@ -18,7 +18,7 @@ Los datos mínimos con los que deberá contar el artículo son los siguientes:
 - Nombre.
 - Descripción.
 - Marca (seleccionable de una lista desplegable).
-- Categoría (seleccionable de una lista desplegable.
+- Categoría (seleccionable de una lista desplegable).
 - Imagen.
 - Precio.
 
