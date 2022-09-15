@@ -21,9 +21,9 @@ namespace Negocio
         
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true");
-            //Data Source = .; Initial Catalog=CATALOGO_DB; integrated security=true
-            //server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true
+            //ESTEF: server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true            
+            //GABI: Data Source = .; Initial Catalog=CATALOGO_DB; integrated security=true
+            conexion = new SqlConnection("Data Source =.; database=CATALOGO_DB; integrated security=true");
             comando = new SqlCommand();
         }
 

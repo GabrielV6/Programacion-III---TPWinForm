@@ -16,7 +16,7 @@ namespace WindowsFormsApp_TP
     public partial class frmArticulo : Form
     {
         private List<Articulo> listaArticulos;
-        
+
         public frmArticulo()
         {
             InitializeComponent();
@@ -106,24 +106,6 @@ namespace WindowsFormsApp_TP
             }
         }
 
-        private void lblAltamarca_Click(object sender, EventArgs e)
-        {
-             //Alta de Marcas
-            frmAltaMarca altamarca = new frmAltaMarca();
-            altamarca.ShowDialog();
-        }
-
-        private void lblAltamodelo_Click(object sender, EventArgs e)
-        {
-            //Altas de Categorias
-            frmAltaCategoria altacategoria = new frmAltaCategoria();
-            altacategoria.ShowDialog();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -170,8 +152,37 @@ namespace WindowsFormsApp_TP
             cargar();
         }
 
-        private void pbArticulos_Click(object sender, EventArgs e)
+        private void MenuArgegaMarca_Click(object sender, EventArgs e)
         {
+            //Alta de Marcas
+
+            frmAltaMarca alta = new frmAltaMarca("Marca","Agregar");
+            alta.ShowDialog();
+        }
+
+        private void MenuAgregaCategoria_Click(object sender, EventArgs e)
+        {
+            //Altas de Categorias
+            frmAltaCategoria altacategoria = new frmAltaCategoria("Categoria","Agregar");
+            altacategoria.ShowDialog();
+        }
+
+        private void MenuModificaMarca_Click(object sender, EventArgs e)
+        {
+            //Modifcacion de Marcas
+            frmAltaMarca modificar = new frmAltaMarca("Marca", "Modificar");
+            modificar.ShowDialog();
+            cargar();
+
+        }
+
+        private void MenuModificaCategoria_Click(object sender, EventArgs e)
+        {
+            //Modificacion de Categorias
+            frmAltaCategoria modificar = new frmAltaCategoria("Categoria", "Modificar");
+            modificar.ShowDialog();
+            cargar();
+            
 
         }
     }

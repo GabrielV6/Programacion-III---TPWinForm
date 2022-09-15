@@ -15,6 +15,7 @@ namespace WindowsFormsApp_TP
     public partial class frmAltaArticulo : Form
     {
         private Articulo articulo = null;
+     
         public frmAltaArticulo()
         {
             InitializeComponent();   
@@ -56,9 +57,12 @@ namespace WindowsFormsApp_TP
                 // Validar si el formato del precio es vacio o es 0
               
 
-                if (Convert.ToDecimal(txbPrecio.Text) > 0)
+                if (decimal.Parse(txbPrecio.Text) > 0)
                 {
-                    articulo.Precio = Convert.ToDecimal(txbPrecio.Text);
+                    //articulo.Precio = Convert.ToDecimal(txbPrecio.Text);
+                    articulo.Precio = decimal.Parse(txbPrecio.Text);
+             
+                    
                 }
                 else
                 {
@@ -84,10 +88,8 @@ namespace WindowsFormsApp_TP
             }
             catch (Exception ex)
             {
-                if (txbPrecio.Text == ""|| Convert.ToDecimal(txbPrecio.Text)==0)
-                    MessageBox.Show("El precio debe ser mayor a cero");
-
-                DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "No es posible la operacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+     
+                DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "Error de formato Numerico", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.No)
                 {
                     Close();

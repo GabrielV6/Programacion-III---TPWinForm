@@ -14,9 +14,28 @@ namespace WindowsFormsApp_TP
 {
     public partial class frmAltaMarca : Form
     {
+     
+        Marca seleccionado;
+        
+        private string accion;
+        private string tipo;
+
+        private List<Marca> listaMarcas;
+        
         public frmAltaMarca()
         {
             InitializeComponent();
+          
+        }
+        
+        public frmAltaMarca(string tipo,string accion)
+        {
+            InitializeComponent();
+            
+            Text = tipo;
+            lbTitulo.Text = accion;
+            this.accion = accion;
+            this.tipo = tipo;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -31,21 +50,43 @@ namespace WindowsFormsApp_TP
 
             try
             {
-                marca.DescripcionMarca = txbDescripcionmarca.Text;
-                
-                if (marca.DescripcionMarca == "" || marca.DescripcionMarca == null)
+                if(!this.accion.Equals("Modificar"))
                 {
-                    MessageBox.Show("Debe ingresar una marca");
-                    throw new Exception();
+                    marca.DescripcionMarca = txbDescripcionmarca.Text;
+                    if (marca.DescripcionMarca == "" || marca.DescripcionMarca == null)
+                    {
+                        MessageBox.Show("Debe ingresar una marca");
+                        throw new Exception();
+                    }
+                }
+                else
+                {
+                    //Traigo del la grilla el ID seleccionado.
+                    marca.DescripcionMarca = txbDescripcionmarca.Text;
+                    SelecionarDescripcionMarca();
+                    marca.Id = seleccionado.Id;
+                }
+               
+          
+                if(this.accion.Equals("Modificar"))
+                {   
+                   
+                    negocio.modificar(marca);
+                    MessageBox.Show("Marca Modificada Existosamente");
+                    txbDescripcionmarca.Text = "";
+                    cargar();
+
                 }
                 else
                 {
                     negocio.agregar(marca);
-                    MessageBox.Show("Marca agregada");
-                    this.Close();
+                    MessageBox.Show("Marca Agregada Exitosamente");
+                    txbDescripcionmarca.Text = "";
+                    cargar();
                 }
-              
-                Close();
+
+                // Close();
+                cargar();
 
             }
             catch (Exception ex)
@@ -64,9 +105,8 @@ namespace WindowsFormsApp_TP
             MarcaNegocio negocio = new MarcaNegocio();
             try
             {
-                cboIdmarcaexistente.DataSource = negocio.listar();
-                cboIdmarcaexistente.ValueMember = "Id";
-                cboIdmarcaexistente.DisplayMember = "DescripcionMarca";
+                cargar();
+                txbDescripcionmarca.Text = "";
             }
             catch (Exception ex)
             {
@@ -74,5 +114,41 @@ namespace WindowsFormsApp_TP
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void cargar()
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+
+            try
+            {
+                listaMarcas = negocio.listar();
+                dgvMarcasExistentes.DataSource = listaMarcas;
+                dgvMarcasExistentes.Columns["Id"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        
+
+        private void dgvMarcasExistentes_SelectionChanged(object sender, EventArgs e)
+        {
+            SelecionarDescripcionMarca();
+        }
+
+        private void SelecionarDescripcionMarca()
+        {
+         
+            if (dgvMarcasExistentes.CurrentRow != null && this.accion.Equals("Modificar"))
+            {
+
+                seleccionado = (Marca)dgvMarcasExistentes.CurrentRow.DataBoundItem;
+                txbDescripcionmarca.Text = seleccionado.DescripcionMarca;
+
+            }
+        }
+
+
     }
 }

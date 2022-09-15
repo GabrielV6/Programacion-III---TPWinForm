@@ -69,3 +69,4 @@ C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPW
 C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\obj\Debug\WindowsFormsApp_TP.frmAltaCategoria.resources
 C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\obj\Debug\WindowsFormsApp_TP.frmAltaMarca.resources
 C:\Users\acedo\OneDrive\Desktop\ProgramacionIII\TP_ABM\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\obj\Debug\WindowsFormsApp_TP.frmVerArticulo.resources
+C:\Users\gabriel.vargas.pabon\OneDrive - Accenture\Escritorio\C#\APP-TP-REPO\TPWinform_Vargas_Delgado\WindowsFormsApp_TP\obj\Debug\WindowsFormsApp_TP.frmVerArticulo.resources

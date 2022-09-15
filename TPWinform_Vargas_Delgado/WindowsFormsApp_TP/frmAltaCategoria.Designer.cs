@@ -28,24 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cboIdcategoriaexistente = new System.Windows.Forms.ComboBox();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txbDescripcioncategoria = new System.Windows.Forms.TextBox();
             this.lbIdcategoriaExistente = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
+            this.dgvCategoriasExistentes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoriasExistentes)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cboIdcategoriaexistente
-            // 
-            this.cboIdcategoriaexistente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboIdcategoriaexistente.FormattingEnabled = true;
-            this.cboIdcategoriaexistente.Location = new System.Drawing.Point(651, 72);
-            this.cboIdcategoriaexistente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboIdcategoriaexistente.Name = "cboIdcategoriaexistente";
-            this.cboIdcategoriaexistente.Size = new System.Drawing.Size(199, 24);
-            this.cboIdcategoriaexistente.TabIndex = 36;
             // 
             // lbTitulo
             // 
@@ -93,7 +84,7 @@
             // lbIdcategoriaExistente
             // 
             this.lbIdcategoriaExistente.AutoSize = true;
-            this.lbIdcategoriaExistente.Location = new System.Drawing.Point(491, 80);
+            this.lbIdcategoriaExistente.Location = new System.Drawing.Point(578, 42);
             this.lbIdcategoriaExistente.Name = "lbIdcategoriaExistente";
             this.lbIdcategoriaExistente.Size = new System.Drawing.Size(137, 16);
             this.lbIdcategoriaExistente.TabIndex = 37;
@@ -104,16 +95,33 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(33, 81);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(214, 16);
+            this.lblDescripcion.Size = new System.Drawing.Size(174, 16);
             this.lblDescripcion.TabIndex = 34;
-            this.lblDescripcion.Text = "Descripcion de la nueva Categoria";
+            this.lblDescripcion.Text = "Descripcion de la Categoria";
+            // 
+            // dgvCategoriasExistentes
+            // 
+            this.dgvCategoriasExistentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCategoriasExistentes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvCategoriasExistentes.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dgvCategoriasExistentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategoriasExistentes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvCategoriasExistentes.Location = new System.Drawing.Point(538, 61);
+            this.dgvCategoriasExistentes.MultiSelect = false;
+            this.dgvCategoriasExistentes.Name = "dgvCategoriasExistentes";
+            this.dgvCategoriasExistentes.RowHeadersWidth = 4;
+            this.dgvCategoriasExistentes.RowTemplate.Height = 24;
+            this.dgvCategoriasExistentes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCategoriasExistentes.Size = new System.Drawing.Size(227, 97);
+            this.dgvCategoriasExistentes.TabIndex = 41;
+            this.dgvCategoriasExistentes.SelectionChanged += new System.EventHandler(this.dgvCategoriasExistentes_SelectionChanged);
             // 
             // frmAltaCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 186);
-            this.Controls.Add(this.cboIdcategoriaexistente);
+            this.ClientSize = new System.Drawing.Size(831, 194);
+            this.Controls.Add(this.dgvCategoriasExistentes);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -124,19 +132,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Altas de Categorias";
             this.Load += new System.EventHandler(this.frmAltaCategoria_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategoriasExistentes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cboIdcategoriaexistente;
         private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txbDescripcioncategoria;
         private System.Windows.Forms.Label lbIdcategoriaExistente;
         private System.Windows.Forms.Label lblDescripcion;
+        public System.Windows.Forms.DataGridView dgvCategoriasExistentes;
     }
 }

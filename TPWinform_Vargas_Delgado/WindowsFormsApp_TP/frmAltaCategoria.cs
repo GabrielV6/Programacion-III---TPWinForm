@@ -14,9 +14,26 @@ namespace WindowsFormsApp_TP
 {
     public partial class frmAltaCategoria : Form
     {
+        private string accion;
+        private string tipo;
+
+        Categoria seleccionado;
+
+        private List<Categoria> listaCategorias;
+
         public frmAltaCategoria()
         {
             InitializeComponent();
+        }
+
+        public frmAltaCategoria(string tipo, string accion)
+        {
+            InitializeComponent();
+
+            Text = tipo;
+            lbTitulo.Text = accion;
+            this.accion = accion;
+            this.tipo = tipo;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -31,21 +48,44 @@ namespace WindowsFormsApp_TP
             
             try
             {
-                categoria.Descripcion = txbDescripcioncategoria.Text;
-                
-                if (categoria.Descripcion == "" || categoria.Descripcion == null)
+                if (!this.accion.Equals("Modificar"))
                 {
-                    MessageBox.Show("Debe ingresar una Categoria");
-                    throw new Exception();
+                    categoria.Descripcion = txbDescripcioncategoria.Text;
+                    if (categoria.Descripcion == "" || categoria.Descripcion == null)
+                    {
+                        MessageBox.Show("Debe ingresar una Categoria");
+                        throw new Exception();
+                    }
+                }
+                else
+                {
+                    
+
+                    categoria.Descripcion = txbDescripcioncategoria.Text;
+                    SelecionarDescripcionCategoria();
+                    categoria.Id = seleccionado.Id;
+                }
+
+
+                if (this.accion.Equals("Modificar"))
+                {
+
+                    negocio.modificar(categoria);
+                    MessageBox.Show("Categoria Modificada Exitosamente");
+                    txbDescripcioncategoria.Text = "";
+                    cargar();
+
                 }
                 else
                 {
                     negocio.agregar(categoria);
-                    MessageBox.Show("Categoria Agregada");
-                    this.Close();
+                    MessageBox.Show("Categoria Modificada Exitosamente");
+                    txbDescripcioncategoria.Text = "";
+    
+                    cargar();
                 }
 
-                Close();
+                cargar();
 
             }
             catch (Exception ex)
@@ -63,9 +103,7 @@ namespace WindowsFormsApp_TP
             CategoriaNegocio negocio = new CategoriaNegocio();
             try
             {
-                cboIdcategoriaexistente.DataSource = negocio.listar();
-                cboIdcategoriaexistente.ValueMember = "Id";
-                cboIdcategoriaexistente.DisplayMember = "Descripcion";
+                cargar();
             }
             catch (Exception ex)
             {
@@ -74,6 +112,39 @@ namespace WindowsFormsApp_TP
             }
         }
 
-     
+        private void cargar()
+        {
+            CategoriaNegocio negocio = new CategoriaNegocio();
+
+            try
+            {
+                listaCategorias = negocio.listar();
+                dgvCategoriasExistentes.DataSource = listaCategorias;
+                dgvCategoriasExistentes.Columns["Id"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void dgvCategoriasExistentes_SelectionChanged(object sender, EventArgs e)
+        {
+            SelecionarDescripcionCategoria();
+        }
+
+        private void SelecionarDescripcionCategoria()
+        {
+          
+            if (dgvCategoriasExistentes.CurrentRow != null && this.accion.Equals("Modificar"))
+            {
+
+                seleccionado = (Categoria)dgvCategoriasExistentes.CurrentRow.DataBoundItem;
+                txbDescripcioncategoria.Text = seleccionado.Descripcion;
+
+            }
+        }
+
+      
     }
 }

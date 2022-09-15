@@ -28,24 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cboIdmarcaexistente = new System.Windows.Forms.ComboBox();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txbDescripcionmarca = new System.Windows.Forms.TextBox();
             this.lbIdmarcaExistente = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
+            this.dgvMarcasExistentes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcasExistentes)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cboIdmarcaexistente
-            // 
-            this.cboIdmarcaexistente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboIdmarcaexistente.FormattingEnabled = true;
-            this.cboIdmarcaexistente.Location = new System.Drawing.Point(621, 86);
-            this.cboIdmarcaexistente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboIdmarcaexistente.Name = "cboIdmarcaexistente";
-            this.cboIdmarcaexistente.Size = new System.Drawing.Size(199, 24);
-            this.cboIdmarcaexistente.TabIndex = 23;
             // 
             // lbTitulo
             // 
@@ -93,7 +84,7 @@
             // lbIdmarcaExistente
             // 
             this.lbIdmarcaExistente.AutoSize = true;
-            this.lbIdmarcaExistente.Location = new System.Drawing.Point(492, 94);
+            this.lbIdmarcaExistente.Location = new System.Drawing.Point(582, 44);
             this.lbIdmarcaExistente.Name = "lbIdmarcaExistente";
             this.lbIdmarcaExistente.Size = new System.Drawing.Size(116, 16);
             this.lbIdmarcaExistente.TabIndex = 24;
@@ -104,16 +95,33 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(57, 95);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(193, 16);
+            this.lblDescripcion.Size = new System.Drawing.Size(153, 16);
             this.lblDescripcion.TabIndex = 17;
-            this.lblDescripcion.Text = "Descripcion de la nueva Marca";
+            this.lblDescripcion.Text = "Descripcion de la Marca";
+            // 
+            // dgvMarcasExistentes
+            // 
+            this.dgvMarcasExistentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMarcasExistentes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvMarcasExistentes.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dgvMarcasExistentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarcasExistentes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvMarcasExistentes.Location = new System.Drawing.Point(525, 75);
+            this.dgvMarcasExistentes.MultiSelect = false;
+            this.dgvMarcasExistentes.Name = "dgvMarcasExistentes";
+            this.dgvMarcasExistentes.RowHeadersWidth = 4;
+            this.dgvMarcasExistentes.RowTemplate.Height = 24;
+            this.dgvMarcasExistentes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMarcasExistentes.Size = new System.Drawing.Size(227, 97);
+            this.dgvMarcasExistentes.TabIndex = 34;
+            this.dgvMarcasExistentes.SelectionChanged += new System.EventHandler(this.dgvMarcasExistentes_SelectionChanged);
             // 
             // frmAltaMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 196);
-            this.Controls.Add(this.cboIdmarcaexistente);
+            this.ClientSize = new System.Drawing.Size(814, 205);
+            this.Controls.Add(this.dgvMarcasExistentes);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -124,18 +132,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Altas de Marcas";
             this.Load += new System.EventHandler(this.frmAltaMarca_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcasExistentes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox cboIdmarcaexistente;
         private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txbDescripcionmarca;
         private System.Windows.Forms.Label lbIdmarcaExistente;
         private System.Windows.Forms.Label lblDescripcion;
+        public System.Windows.Forms.DataGridView dgvMarcasExistentes;
     }
 }
