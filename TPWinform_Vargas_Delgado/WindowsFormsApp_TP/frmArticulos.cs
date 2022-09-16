@@ -125,12 +125,29 @@ namespace WindowsFormsApp_TP
                 cboCriterio.Items.Add("Termina con");
             }
         }
+        private bool validarFiltro()
+        {
+            if (cboCampo.SelectedIndex < 0) 
+            {
+                MessageBox.Show("Debe seleccionar un campo para la busqueda");
+                return true;
+            }
+            if (cboCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar un criterio para la busqueda");
+                return true;
+            }
 
+            return false;
+        }
         private void btnFiltro_Click(object sender, EventArgs e)
         {
             ArticuloNegocio articulo = new ArticuloNegocio();
             try
             {
+                if (validarFiltro())
+                    return;
+
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();
                 string filtro = txtFiltro.Text;
