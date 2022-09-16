@@ -13,5 +13,4 @@ Correciones:
 Agregados:
 - [x] Modificar y eliminar (Marca y Categoria) (gabi) -> LISTO ****
 
-Division de pantallas... 
-[Menu]
+- [x] Division de pantallas... [Menu]
