@@ -1,16 +1,16 @@
 Minuta -> Pendientes 
 
 Correciones:
--[ ] Decimales 2 (gabi)
--> Letras en el precio (gabi) -> LISTO ****
--> Añadir imagen local (video 22) (gabi)
+- [ ] Decimales 2 (gabi)
+- [x] Letras en el precio (gabi) -> LISTO ****
+- [ ] Añadir imagen local (video 22) (gabi)
 
--> Limpiar imagen del filtro (estef)***-> LISTO
--> Si el filtro no trae nada entonces no mostrar articulos desde el boton (Estef) LISTO
--> Validacion del filtro con 2 criterios de busqueda (Estef)
+- [x] Limpiar imagen del filtro (estef)***
+- [x] Si el filtro no trae nada entonces no mostrar articulos desde el boton (Estef) 
+- [x] Validacion del filtro con 2 criterios de busqueda (Estef)
 
 Agregados:
--> Modiciar y eliminar (Marca y Categoria) (gabi) -> LISTO ****
+- [x] Modificar y eliminar (Marca y Categoria) (gabi) -> LISTO ****
 
 Division de pantallas... 
 [Menu]
