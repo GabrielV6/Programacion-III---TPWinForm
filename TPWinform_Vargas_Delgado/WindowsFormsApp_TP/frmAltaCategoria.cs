@@ -45,22 +45,24 @@ namespace WindowsFormsApp_TP
         {
             Categoria categoria = new Categoria();
             CategoriaNegocio negocio = new CategoriaNegocio();
-            
+
             try
             {
                 if (!this.accion.Equals("Modificar"))
                 {
                     categoria.Descripcion = txbDescripcioncategoria.Text;
-                    if (categoria.Descripcion == "" || categoria.Descripcion == null)
+                    if (string.IsNullOrWhiteSpace(txbDescripcioncategoria.Text))
                     {
-                        MessageBox.Show("Debe ingresar una Categoria");
                         throw new Exception();
                     }
                 }
                 else
                 {
-                    
 
+                    if (string.IsNullOrWhiteSpace(txbDescripcioncategoria.Text))
+                    {
+                        throw new Exception();
+                    }
                     categoria.Descripcion = txbDescripcioncategoria.Text;
                     SelecionarDescripcionCategoria();
                     categoria.Id = seleccionado.Id;
@@ -72,16 +74,16 @@ namespace WindowsFormsApp_TP
 
                     negocio.modificar(categoria);
                     MessageBox.Show("Categoria Modificada Exitosamente");
-                    txbDescripcioncategoria.Text = "";
+                    txbDescripcioncategoria.Text = null;
                     cargar();
 
                 }
                 else
                 {
                     negocio.agregar(categoria);
-                    MessageBox.Show("Categoria Modificada Exitosamente");
-                    txbDescripcioncategoria.Text = "";
-    
+                    MessageBox.Show("Categoria Agregada Exitosamente");
+                    txbDescripcioncategoria.Text = null;
+
                     cargar();
                 }
 
@@ -90,7 +92,7 @@ namespace WindowsFormsApp_TP
             }
             catch (Exception ex)
             {
-                DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "No es posible la operacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "Faltan Campos para grabar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (respuesta == DialogResult.No)
                 {
                     Close();
@@ -135,7 +137,7 @@ namespace WindowsFormsApp_TP
 
         private void SelecionarDescripcionCategoria()
         {
-          
+
             if (dgvCategoriasExistentes.CurrentRow != null && this.accion.Equals("Modificar"))
             {
 
@@ -145,6 +147,6 @@ namespace WindowsFormsApp_TP
             }
         }
 
-      
+
     }
 }

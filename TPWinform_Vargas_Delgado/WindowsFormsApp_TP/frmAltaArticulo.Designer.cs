@@ -45,6 +45,9 @@
             this.lbTitulo = new System.Windows.Forms.Label();
             this.cboIdmarca = new System.Windows.Forms.ComboBox();
             this.cboIdcategoria = new System.Windows.Forms.ComboBox();
+            this.btnImagen = new System.Windows.Forms.Button();
+            this.pbxImagenAlta = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagenAlta)).BeginInit();
             this.SuspendLayout();
             // 
             // lbCodigo
@@ -104,7 +107,7 @@
             // lbPrecio
             // 
             this.lbPrecio.AutoSize = true;
-            this.lbPrecio.Location = new System.Drawing.Point(75, 306);
+            this.lbPrecio.Location = new System.Drawing.Point(75, 318);
             this.lbPrecio.Name = "lbPrecio";
             this.lbPrecio.Size = new System.Drawing.Size(46, 16);
             this.lbPrecio.TabIndex = 6;
@@ -145,7 +148,7 @@
             // 
             // txbPrecio
             // 
-            this.txbPrecio.Location = new System.Drawing.Point(147, 302);
+            this.txbPrecio.Location = new System.Drawing.Point(147, 314);
             this.txbPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(199, 22);
@@ -194,7 +197,6 @@
             this.cboIdmarca.Name = "cboIdmarca";
             this.cboIdmarca.Size = new System.Drawing.Size(199, 24);
             this.cboIdmarca.TabIndex = 3;
-
             // 
             // cboIdcategoria
             // 
@@ -206,11 +208,36 @@
             this.cboIdcategoria.Size = new System.Drawing.Size(199, 24);
             this.cboIdcategoria.TabIndex = 4;
             // 
+            // btnImagen
+            // 
+            this.btnImagen.Location = new System.Drawing.Point(352, 263);
+            this.btnImagen.Name = "btnImagen";
+            this.btnImagen.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnImagen.Size = new System.Drawing.Size(34, 24);
+            this.btnImagen.TabIndex = 17;
+            this.btnImagen.Text = "+";
+            this.btnImagen.UseVisualStyleBackColor = true;
+            this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click_1);
+            // 
+            // pbxImagenAlta
+            // 
+            this.pbxImagenAlta.BackColor = System.Drawing.SystemColors.Info;
+            this.pbxImagenAlta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxImagenAlta.Location = new System.Drawing.Point(423, 66);
+            this.pbxImagenAlta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbxImagenAlta.Name = "pbxImagenAlta";
+            this.pbxImagenAlta.Size = new System.Drawing.Size(283, 259);
+            this.pbxImagenAlta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxImagenAlta.TabIndex = 18;
+            this.pbxImagenAlta.TabStop = false;
+            // 
             // frmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 410);
+            this.ClientSize = new System.Drawing.Size(772, 410);
+            this.Controls.Add(this.pbxImagenAlta);
+            this.Controls.Add(this.btnImagen);
             this.Controls.Add(this.cboIdcategoria);
             this.Controls.Add(this.cboIdmarca);
             this.Controls.Add(this.lbTitulo);
@@ -233,6 +260,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta de articulo";
             this.Load += new System.EventHandler(this.frmAltaArticulo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagenAlta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,5 +285,7 @@
         private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.ComboBox cboIdmarca;
         private System.Windows.Forms.ComboBox cboIdcategoria;
+        private System.Windows.Forms.Button btnImagen;
+        private System.Windows.Forms.PictureBox pbxImagenAlta;
     }
 }

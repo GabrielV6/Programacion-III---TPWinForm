@@ -38,7 +38,7 @@ namespace WindowsFormsApp_TP
         }
 
         //metodo para imagenes sin url
-        
+
         private void cargarImagen(string imagen)
         {
             try
@@ -60,7 +60,7 @@ namespace WindowsFormsApp_TP
             {
                 listaArticulos = negocio.listar();
                 dgvArticulo.DataSource = listaArticulos;
-                dgvArticulo.Columns["ImagenURL"].Visible = false; 
+                dgvArticulo.Columns["ImagenURL"].Visible = false;
                 dgvArticulo.Columns["Id"].Visible = false;
                 cargarImagen(listaArticulos[0].ImagenUrl);
             }
@@ -100,7 +100,7 @@ namespace WindowsFormsApp_TP
             {
                 seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
                 DialogResult respuesta = MessageBox.Show("Confirma la eliminacion del articulo seleccionado? ", "Eliminando articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (respuesta == DialogResult.Yes) 
+                if (respuesta == DialogResult.Yes)
                 {
                     negocio.eliminar(seleccionado.Id);
                     cargar();
@@ -133,7 +133,7 @@ namespace WindowsFormsApp_TP
         }
         private bool validarFiltro()
         {
-            if (cboCampo.SelectedIndex < 0) 
+            if (cboCampo.SelectedIndex < 0)
             {
                 MessageBox.Show("Debe seleccionar un campo para la busqueda");
                 return true;
@@ -189,17 +189,17 @@ namespace WindowsFormsApp_TP
                 int cantidad = 0;
                 lista = articulo.filtrar(campo, criterio, filtro);
                 lista.Capacity = cantidad;
-            
+
 
                 if (cantidad == 0)
-                
+
                     pbArticulos.Load("https://th.bing.com/th/id/R.5f8b98acd656c6d261777d035c50a112?rik=9e0Xk%2brW5WO0Yg&riu=http%3a%2f%2fimg2.wikia.nocookie.net%2f__cb20140518072131%2ftowerofsaviors%2fimages%2f4%2f47%2fPlaceholder.png&ehk=CZAAxtW4x95yvm5bFj%2fqN8pJu9M9F1JW8H5KVFRhKnk%3d&risl=&pid=ImgRaw&r=0");
-               
+
 
             }
             catch
             {
-             
+
             }
         }
 
@@ -213,7 +213,7 @@ namespace WindowsFormsApp_TP
                 ver.ShowDialog();
                 cargar();
             }
-            catch 
+            catch
             {
                 MessageBox.Show("No hay articulos para mostrar");
             }
@@ -223,14 +223,14 @@ namespace WindowsFormsApp_TP
         {
             //Alta de Marcas
 
-            frmAltaMarca alta = new frmAltaMarca("Marca","Agregar");
+            frmAltaMarca alta = new frmAltaMarca("Marca", "Agregar");
             alta.ShowDialog();
         }
 
         private void MenuAgregaCategoria_Click(object sender, EventArgs e)
         {
             //Altas de Categorias
-            frmAltaCategoria altacategoria = new frmAltaCategoria("Categoria","Agregar");
+            frmAltaCategoria altacategoria = new frmAltaCategoria("Categoria", "Agregar");
             altacategoria.ShowDialog();
         }
 
@@ -249,8 +249,11 @@ namespace WindowsFormsApp_TP
             frmAltaCategoria modificar = new frmAltaCategoria("Categoria", "Modificar");
             modificar.ShowDialog();
             cargar();
-            
+
 
         }
+
+
     }
 }
+
