@@ -15,7 +15,7 @@ namespace WindowsFormsApp_TP
     public partial class frmAltaArticulo : Form
     {
         private Articulo articulo = null;
-     
+
         public frmAltaArticulo()
         {
             InitializeComponent();   
@@ -46,7 +46,8 @@ namespace WindowsFormsApp_TP
                     articulo = new Articulo();
                 }
                 
-                if (txbCodigo.Text !="")
+                //Validar que no tenga esapacios el codigo
+                if (!string.IsNullOrWhiteSpace(txbCodigo.Text))
                 {
                     articulo.Codigo = txbCodigo.Text;
                 }
@@ -124,8 +125,6 @@ namespace WindowsFormsApp_TP
                      txbCodigo.Text = articulo.Codigo;
                      txbNombre.Text = articulo.Nombre;
                      txbDescripcion.Text = articulo.Descripcion;
-                    // cargamos tambien la imagen del articulo?
-                    // cargarImagen(articulo.Urlimagen);
                      cboIdmarca.SelectedValue = articulo.marca.Id;
                      cboIdcategoria.SelectedValue = articulo.categoria.Id;
                      txbURL.Text = articulo.ImagenUrl;
