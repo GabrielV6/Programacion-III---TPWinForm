@@ -41,7 +41,7 @@ namespace WindowsFormsApp_TP
         {
 
             ArticuloNegocio negocio = new ArticuloNegocio();
-
+            bool b = true;
             try
             {
                 if (articulo == null)
@@ -96,6 +96,7 @@ namespace WindowsFormsApp_TP
                 {
                     negocio.agregar(articulo);
                     MessageBox.Show("Articulo agregado con exito");
+                    b = false;
                     Clear();
                 }
 
@@ -108,13 +109,11 @@ namespace WindowsFormsApp_TP
             }
             catch (Exception ex)
             {
-                if (articulo != null)
-                    return;
-
-                DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "Faltan Campos para grabar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (respuesta == DialogResult.No)
-                    Close();
-
+                if (b) {
+                    DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "Faltan Campos para grabar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (respuesta == DialogResult.No)
+                        Close();
+                }
             }
         }
 
