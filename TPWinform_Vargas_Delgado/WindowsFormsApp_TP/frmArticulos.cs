@@ -79,11 +79,17 @@ namespace WindowsFormsApp_TP
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Articulo seleccionado;
-            seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-
-            frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
-            modificar.ShowDialog();
-            cargar();
+            try
+            {
+                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
+                modificar.ShowDialog();
+                cargar();
+            }
+            catch
+            {
+                MessageBox.Show("No hay articulos para modificar");
+            }
         }
 
         private void btnEliminarFisico_Click(object sender, EventArgs e)
@@ -92,17 +98,17 @@ namespace WindowsFormsApp_TP
             Articulo seleccionado;
             try
             {
+                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
                 DialogResult respuesta = MessageBox.Show("Confirma la eliminacion del articulo seleccionado? ", "Eliminando articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.Yes) 
                 {
-                    seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
                     negocio.eliminar(seleccionado.Id);
                     cargar();
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("No hay articulos seleccionados para eliminar");
             }
         }
 
@@ -188,9 +194,9 @@ namespace WindowsFormsApp_TP
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-              //  MessageBox.Show(ex.ToString());
+                throw;
             }
         }
 
