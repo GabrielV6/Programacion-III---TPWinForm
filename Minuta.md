@@ -1,12 +1,12 @@
 Minuta -> Pendientes 
 
 Correciones:
--> Decimales 2 (gabi)
+-[ ] Decimales 2 (gabi)
 -> Letras en el precio (gabi) -> LISTO ****
 -> Añadir imagen local (video 22) (gabi)
 
--> Limpiar imagen del filtro (estef)***
--> Si el filtro no trae nada entonces no mostrar articulos desde el boton (Estef)
+-> Limpiar imagen del filtro (estef)***-> LISTO
+-> Si el filtro no trae nada entonces no mostrar articulos desde el boton (Estef) LISTO
 -> Validacion del filtro con 2 criterios de busqueda (Estef)
 
 Agregados:
