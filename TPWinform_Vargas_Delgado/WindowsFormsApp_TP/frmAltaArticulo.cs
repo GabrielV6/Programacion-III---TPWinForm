@@ -45,7 +45,15 @@ namespace WindowsFormsApp_TP
                 {
                     articulo = new Articulo();
                 }
-                articulo.Codigo = txbCodigo.Text;
+                
+                if (txbCodigo.Text !="")
+                {
+                    articulo.Codigo = txbCodigo.Text;
+                }
+                else{
+                    throw new Exception();
+                }
+                
                 articulo.Nombre = txbNombre.Text;
                 articulo.Descripcion = txbDescripcion.Text;
 
@@ -89,7 +97,7 @@ namespace WindowsFormsApp_TP
             catch (Exception ex)
             {
      
-                DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "Error de formato Numerico", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "Faltan Campos para grabar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (respuesta == DialogResult.No)
                 {
                     Close();
