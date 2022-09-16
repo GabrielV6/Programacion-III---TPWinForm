@@ -145,11 +145,17 @@ namespace WindowsFormsApp_TP
         private void btnVer_Click(object sender, EventArgs e)
         {
             Articulo seleccionado;
-            seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-
-            frmVerArticulo ver = new frmVerArticulo(seleccionado);
-            ver.ShowDialog();
-            cargar();
+            try
+            {
+                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                frmVerArticulo ver = new frmVerArticulo(seleccionado);
+                ver.ShowDialog();
+                cargar();
+            }
+            catch 
+            {
+                MessageBox.Show("No hay marcas para mostrar");
+            }
         }
 
         private void MenuArgegaMarca_Click(object sender, EventArgs e)
