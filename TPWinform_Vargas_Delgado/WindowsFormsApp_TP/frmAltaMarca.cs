@@ -53,14 +53,19 @@ namespace WindowsFormsApp_TP
                 if(!this.accion.Equals("Modificar"))
                 {
                     marca.DescripcionMarca = txbDescripcionmarca.Text;
-                    if (marca.DescripcionMarca == "" || marca.DescripcionMarca == null)
+                    if (string.IsNullOrWhiteSpace(txbDescripcionmarca.Text))
                     {
-                        MessageBox.Show("Debe ingresar una marca");
+                       
                         throw new Exception();
                     }
                 }
                 else
                 {
+                    if (string.IsNullOrWhiteSpace(txbDescripcionmarca.Text))
+                    {
+                        throw new Exception();
+                    }
+                    
                     //Traigo del la grilla el ID seleccionado.
                     marca.DescripcionMarca = txbDescripcionmarca.Text;
                     SelecionarDescripcionMarca();
@@ -73,7 +78,7 @@ namespace WindowsFormsApp_TP
                    
                     negocio.modificar(marca);
                     MessageBox.Show("Marca Modificada Existosamente");
-                    txbDescripcionmarca.Text = "";
+                    txbDescripcionmarca.Text = null;
                     cargar();
 
                 }
@@ -81,7 +86,7 @@ namespace WindowsFormsApp_TP
                 {
                     negocio.agregar(marca);
                     MessageBox.Show("Marca Agregada Exitosamente");
-                    txbDescripcionmarca.Text = "";
+                    txbDescripcionmarca.Text = null;
                     cargar();
                 }
 
@@ -91,7 +96,7 @@ namespace WindowsFormsApp_TP
             }
             catch (Exception ex)
             {
-                DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "No es posible la operacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "No es posible la operacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (respuesta == DialogResult.No)
                 {
                     Close();
@@ -106,7 +111,7 @@ namespace WindowsFormsApp_TP
             try
             {
                 cargar();
-                txbDescripcionmarca.Text = "";
+                //txbDescripcionmarca.Text = null;
             }
             catch (Exception ex)
             {
