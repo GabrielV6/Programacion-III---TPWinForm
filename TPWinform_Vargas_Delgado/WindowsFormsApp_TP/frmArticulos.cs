@@ -137,9 +137,35 @@ namespace WindowsFormsApp_TP
                 MessageBox.Show("Debe seleccionar un criterio para la busqueda");
                 return true;
             }
+            if (cboCampo.SelectedItem.ToString() == "Precio")
+            {
+                if (string.IsNullOrEmpty(txtFiltro.Text))
+                {
+                    MessageBox.Show("por favor ingrese un precio");
+                    return true;
+                }
+                if (!(soloNumeros(txtFiltro.Text)))
+                {
+                    MessageBox.Show("Solo se pueden ingresar numeros");
+                    return true;
+                }
+            }
 
             return false;
         }
+
+        private bool soloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         private void btnFiltro_Click(object sender, EventArgs e)
         {
             ArticuloNegocio articulo = new ArticuloNegocio();
@@ -171,7 +197,7 @@ namespace WindowsFormsApp_TP
             }
             catch 
             {
-                MessageBox.Show("No hay marcas para mostrar");
+                MessageBox.Show("No hay articulos para mostrar");
             }
         }
 
