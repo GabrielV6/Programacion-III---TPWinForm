@@ -44,18 +44,19 @@
             this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ForeColor = System.Drawing.SystemColors.MenuText;
             this.lbTitulo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbTitulo.Location = new System.Drawing.Point(28, 31);
+            this.lbTitulo.Location = new System.Drawing.Point(21, 25);
+            this.lbTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(160, 31);
+            this.lbTitulo.Size = new System.Drawing.Size(128, 26);
             this.lbTitulo.TabIndex = 33;
             this.lbTitulo.Text = "Registration";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(382, 141);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelar.Location = new System.Drawing.Point(286, 115);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(81, 31);
+            this.btnCancelar.Size = new System.Drawing.Size(61, 25);
             this.btnCancelar.TabIndex = 32;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -63,10 +64,10 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(266, 141);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAceptar.Location = new System.Drawing.Point(200, 115);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 31);
+            this.btnAceptar.Size = new System.Drawing.Size(56, 25);
             this.btnAceptar.TabIndex = 31;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -74,28 +75,30 @@
             // 
             // txbDescripcionmarca
             // 
-            this.txbDescripcionmarca.Location = new System.Drawing.Point(266, 88);
-            this.txbDescripcionmarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbDescripcionmarca.Location = new System.Drawing.Point(200, 72);
+            this.txbDescripcionmarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbDescripcionmarca.Name = "txbDescripcionmarca";
-            this.txbDescripcionmarca.Size = new System.Drawing.Size(199, 22);
+            this.txbDescripcionmarca.Size = new System.Drawing.Size(150, 20);
             this.txbDescripcionmarca.TabIndex = 18;
             this.txbDescripcionmarca.Tag = "";
             // 
             // lbIdmarcaExistente
             // 
             this.lbIdmarcaExistente.AutoSize = true;
-            this.lbIdmarcaExistente.Location = new System.Drawing.Point(582, 44);
+            this.lbIdmarcaExistente.Location = new System.Drawing.Point(436, 36);
+            this.lbIdmarcaExistente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbIdmarcaExistente.Name = "lbIdmarcaExistente";
-            this.lbIdmarcaExistente.Size = new System.Drawing.Size(116, 16);
+            this.lbIdmarcaExistente.Size = new System.Drawing.Size(93, 13);
             this.lbIdmarcaExistente.TabIndex = 24;
             this.lbIdmarcaExistente.Text = "Marcas Existentes";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(57, 95);
+            this.lblDescripcion.Location = new System.Drawing.Point(43, 77);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(153, 16);
+            this.lblDescripcion.Size = new System.Drawing.Size(122, 13);
             this.lblDescripcion.TabIndex = 17;
             this.lblDescripcion.Text = "Descripcion de la Marca";
             // 
@@ -106,21 +109,22 @@
             this.dgvMarcasExistentes.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dgvMarcasExistentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarcasExistentes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvMarcasExistentes.Location = new System.Drawing.Point(525, 75);
+            this.dgvMarcasExistentes.Location = new System.Drawing.Point(394, 61);
+            this.dgvMarcasExistentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMarcasExistentes.MultiSelect = false;
             this.dgvMarcasExistentes.Name = "dgvMarcasExistentes";
             this.dgvMarcasExistentes.RowHeadersWidth = 4;
             this.dgvMarcasExistentes.RowTemplate.Height = 24;
             this.dgvMarcasExistentes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcasExistentes.Size = new System.Drawing.Size(227, 97);
+            this.dgvMarcasExistentes.Size = new System.Drawing.Size(170, 169);
             this.dgvMarcasExistentes.TabIndex = 34;
             this.dgvMarcasExistentes.SelectionChanged += new System.EventHandler(this.dgvMarcasExistentes_SelectionChanged);
             // 
             // frmAltaMarca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 205);
+            this.ClientSize = new System.Drawing.Size(609, 270);
             this.Controls.Add(this.dgvMarcasExistentes);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnCancelar);
@@ -128,6 +132,10 @@
             this.Controls.Add(this.txbDescripcionmarca);
             this.Controls.Add(this.lbIdmarcaExistente);
             this.Controls.Add(this.lblDescripcion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAltaMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Altas de Marcas";

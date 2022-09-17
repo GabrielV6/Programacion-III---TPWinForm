@@ -32,6 +32,18 @@ namespace WindowsFormsApp_TP
             lbTitulo.Text = "Update";
         }
 
+        private bool soloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -68,28 +80,25 @@ namespace WindowsFormsApp_TP
 
                 articulo.ImagenUrl = txbURL.Text;
                 // Validar si el formato del precio es vacio o es 0
-
-
-                if (decimal.Parse(txbPrecio.Text) > 0)
-                {
-                    //articulo.Precio = Convert.ToDecimal(txbPrecio.Text);
-                    articulo.Precio = decimal.Parse(txbPrecio.Text);
-
-
-                }
-                else
-                {
-                    //si el precio es menor a 0 o vacio, entonces ir directamente al catch
-
-                    throw new Exception();
-                }
-
-
+                
+                    if (decimal.Parse(txbPrecio.Text) > 0)
+                    {
+                        //articulo.Precio = Convert.ToDecimal(txbPrecio.Text);
+                        articulo.Precio = decimal.Parse(txbPrecio.Text);
+                    }
+                    else
+                    {
+                        //si el precio es menor a 0 o vacio, entonces ir directamente al catch
+                        throw new Exception();
+                    }
+   
+                
                 if (articulo.Id != 0)
                 {
                     negocio.modificar(articulo);
                     MessageBox.Show("Articulo modificado con exito");
                     CargarImagen(articulo.ImagenUrl);
+                    b = false;
                     Clear();
                 }
                 else
@@ -103,14 +112,12 @@ namespace WindowsFormsApp_TP
                 if (archivo != null && !(txbURL.Text.ToUpper().Contains("HTTP")))
                     PictureLocal();
 
-
                 this.Close();
-
             }
             catch (Exception ex)
             {
                 if (b) {
-                    DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "Faltan Campos para grabar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult respuesta = MessageBox.Show("¿Desea intentar de nuevo?", "Verifique los campos y que el precio sea un numero", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (respuesta == DialogResult.No)
                         Close();
                 }

@@ -44,18 +44,19 @@
             this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ForeColor = System.Drawing.SystemColors.MenuText;
             this.lbTitulo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbTitulo.Location = new System.Drawing.Point(4, 17);
+            this.lbTitulo.Location = new System.Drawing.Point(3, 14);
+            this.lbTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(160, 31);
+            this.lbTitulo.Size = new System.Drawing.Size(128, 26);
             this.lbTitulo.TabIndex = 40;
             this.lbTitulo.Text = "Registration";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(375, 127);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelar.Location = new System.Drawing.Point(281, 103);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(81, 31);
+            this.btnCancelar.Size = new System.Drawing.Size(61, 25);
             this.btnCancelar.TabIndex = 39;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -63,10 +64,10 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(259, 127);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAceptar.Location = new System.Drawing.Point(194, 103);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 31);
+            this.btnAceptar.Size = new System.Drawing.Size(56, 25);
             this.btnAceptar.TabIndex = 38;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -74,28 +75,30 @@
             // 
             // txbDescripcioncategoria
             // 
-            this.txbDescripcioncategoria.Location = new System.Drawing.Point(261, 74);
-            this.txbDescripcioncategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbDescripcioncategoria.Location = new System.Drawing.Point(196, 60);
+            this.txbDescripcioncategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbDescripcioncategoria.Name = "txbDescripcioncategoria";
-            this.txbDescripcioncategoria.Size = new System.Drawing.Size(199, 22);
+            this.txbDescripcioncategoria.Size = new System.Drawing.Size(150, 20);
             this.txbDescripcioncategoria.TabIndex = 35;
             this.txbDescripcioncategoria.Tag = "";
             // 
             // lbIdcategoriaExistente
             // 
             this.lbIdcategoriaExistente.AutoSize = true;
-            this.lbIdcategoriaExistente.Location = new System.Drawing.Point(578, 42);
+            this.lbIdcategoriaExistente.Location = new System.Drawing.Point(434, 34);
+            this.lbIdcategoriaExistente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbIdcategoriaExistente.Name = "lbIdcategoriaExistente";
-            this.lbIdcategoriaExistente.Size = new System.Drawing.Size(137, 16);
+            this.lbIdcategoriaExistente.Size = new System.Drawing.Size(108, 13);
             this.lbIdcategoriaExistente.TabIndex = 37;
             this.lbIdcategoriaExistente.Text = "Categorias Existentes";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(33, 81);
+            this.lblDescripcion.Location = new System.Drawing.Point(25, 66);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(174, 16);
+            this.lblDescripcion.Size = new System.Drawing.Size(137, 13);
             this.lblDescripcion.TabIndex = 34;
             this.lblDescripcion.Text = "Descripcion de la Categoria";
             // 
@@ -106,21 +109,22 @@
             this.dgvCategoriasExistentes.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dgvCategoriasExistentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategoriasExistentes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvCategoriasExistentes.Location = new System.Drawing.Point(538, 61);
+            this.dgvCategoriasExistentes.Location = new System.Drawing.Point(404, 50);
+            this.dgvCategoriasExistentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCategoriasExistentes.MultiSelect = false;
             this.dgvCategoriasExistentes.Name = "dgvCategoriasExistentes";
             this.dgvCategoriasExistentes.RowHeadersWidth = 4;
             this.dgvCategoriasExistentes.RowTemplate.Height = 24;
             this.dgvCategoriasExistentes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCategoriasExistentes.Size = new System.Drawing.Size(227, 97);
+            this.dgvCategoriasExistentes.Size = new System.Drawing.Size(170, 182);
             this.dgvCategoriasExistentes.TabIndex = 41;
             this.dgvCategoriasExistentes.SelectionChanged += new System.EventHandler(this.dgvCategoriasExistentes_SelectionChanged);
             // 
             // frmAltaCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 194);
+            this.ClientSize = new System.Drawing.Size(623, 278);
             this.Controls.Add(this.dgvCategoriasExistentes);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnCancelar);
@@ -128,6 +132,10 @@
             this.Controls.Add(this.txbDescripcioncategoria);
             this.Controls.Add(this.lbIdcategoriaExistente);
             this.Controls.Add(this.lblDescripcion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAltaCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Altas de Categorias";
